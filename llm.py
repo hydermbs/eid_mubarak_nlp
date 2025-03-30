@@ -4,6 +4,7 @@ from langchain_huggingface import HuggingFaceEndpoint
 import os
 
 api_key = os.getenv("API_KEY")
+print(api_key)
 
 def greetings_function(tone, recipient, rec_name, sender_name):
     token = api_key

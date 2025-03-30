@@ -17,7 +17,7 @@ def greetings_function(tone, recipient, rec_name, sender_name):
         huggingfacehub_api_token=token
     )
 
-    template = "Write a heartfelt Eid Mubarak message in a {tone} tone for {recipient_name}, who is a {recipient_type}, from {sender_name}. The message should be warm, celebratory, and within 50 words."
+    template = "Write a heartfelt Eid Mubarak message in a {tone} tone for {rec_name}, who is a {recipient}, from {sender_name}. The message should be warm, celebratory, and within 50 words."
     prompt = PromptTemplate(template=template, input_variables=["tone", "recipient", "rec_name", "sender_name"])
     llm_chain = LLMChain(llm=llm, prompt=prompt)
     return llm_chain.invoke({"tone": tone, "recipient": recipient, "rec_name": rec_name, "sender_name":sender_name})

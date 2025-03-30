@@ -26,7 +26,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Lists
-tones = ["Formal", "Friendly", "Religious", "Poetic", "Spiritual","Casual"]
+tones = ["Formal", "Friendly", "Religious", "Poetic", "Spiritual","Casual", "Funny"]
 recipient_types = ["Family", "Friend", "Colleague", "Neighbor", "Boss"]
 
 st.title("🌙 Eid Mubarak Message Generator")

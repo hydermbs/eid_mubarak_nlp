@@ -22,33 +22,6 @@ st.markdown("""
             border-radius: 10px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
-        input, select {
-            background-color: white !important;
-            color: black !important;
-            border: 1px solid #ccc !important;
-            border-radius: 5px !important;
-            padding: 10px !important;
-        }
-        select {
-            background-color: white !important;
-            color: black !important;
-            border: 1px solid #ff6f61 !important;
-            padding: 10px !important;
-            border-radius: 5px !important;
-        }
-        button {
-            background-color: white !important;
-            color: black !important;
-            border: 2px solid #ff6f61 !important;
-            border-radius: 5px !important;
-            padding: 10px 20px !important;
-            font-size: 16px !important;
-            cursor: pointer !important;
-        }
-        button:hover {
-            background-color: #ff6f61 !important;
-            color: white !important;
-        }
     </style>
 """, unsafe_allow_html=True)
 

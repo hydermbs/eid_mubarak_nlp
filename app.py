@@ -29,6 +29,13 @@ st.markdown("""
             border-radius: 5px !important;
             padding: 10px !important;
         }
+        select {
+            background-color: white !important;
+            color: black !important;
+            border: 1px solid #ff6f61 !important;
+            padding: 10px !important;
+            border-radius: 5px !important;
+        }
         button {
             background-color: white !important;
             color: black !important;

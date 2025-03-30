@@ -1,15 +1,22 @@
+name: Debug API Key
+
+on: [push]
+
 jobs:
-  deploy:
+  test-secret:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
       - name: Debug API Key
-        run: echo "API Key Length: ${#API_KEY}"
+        run: |
+          if [ -z "$API_KEY" ]; then
+            echo "❌ API Key is NOT set!"
+            exit 1
+          else
+            echo "✅ API Key is set. Length: ${#API_KEY}"
+            echo "🔍 First 4 characters: ${API_KEY:0:4}"  # Should show "hf_y"
+          fi
         env:
           API_KEY: ${{ secrets.API_KEY }}
-
-      - name: Run Streamlit App
-        working-directory: llm
-        env:
-          API_KEY: ${{ secrets.API_KEY }}  # Pass secret here
-  

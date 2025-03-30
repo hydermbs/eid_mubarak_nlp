@@ -65,9 +65,7 @@ recipient_name = st.text_input("Recipient Name")
 sender_name = st.text_input("Your Name")
 
 if st.button("Generate Message"):
-    if recipient_name and sender_name:
-        with st.status("Message is being written.....⏳", expanded=True) as status:
-            message = main(tone, recipient_type,recipient_name,sender_name)
-            st.markdown(f'<div class="message-box">{message}</div>', unsafe_allow_html=True)
-    else:
-        st.warning("Please enter both recipient and sender names.")
+    with st.status("Message is being written.....⏳", expanded=True) as status:
+        message = main(tone, recipient_type,recipient_name,sender_name)
+        st.markdown(f'<div class="message-box">{message}</div>', unsafe_allow_html=True)
+  
